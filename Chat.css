@@ -1,0 +1,138 @@
+body {
+    background-color: #2c2f33;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container {
+    width: 90vw; /* 90% of the viewport width */
+    height: 90vh; /* 90% of the viewport height */
+    background-color: #36393f;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    background-color: #23272a;
+    text-align: center;
+    padding: 15px;
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 15px;
+    background-color: #36393f;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 10px;
+    color: white; /* Default username color */
+}
+
+.message {
+    padding: 15px;
+    border-radius: 20px;
+    max-width: 70%;
+    word-wrap: break-word;
+    color: white; /* Message text color always white */
+}
+
+.message.user {
+    background-color: #5865f2; /* Color for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.message.bot {
+    background-color: #4f545c; /* Color for bot messages */
+    align-self: flex-start; /* Align bot messages to the left */
+}
+
+.message img {
+    border-radius: 20px;
+    margin-top: 10px;
+    max-width: 90%;  /* Increase the maximum width of the image */
+    max-height: 400px; /* Increase the maximum height of the image */
+    object-fit: cover; /* Ensure the image retains aspect ratio */
+}
+
+.input-area {
+    display: flex;
+    padding: 15px;
+    background-color: #23272a;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    background-color: #4f545c;
+    color: white;
+}
+
+button {
+    margin-left: 10px;
+    padding: 15px;
+    border: none;
+    background-color: #7289da;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.user-settings {
+    background-color: #23272a;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-settings input[type="text"] {
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4f545c;
+    color: white;
+}
+
+.user-settings select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #4f545c;
+    color: white;
+}
+
+.user-settings button {
+    margin-left: 10px;
+}

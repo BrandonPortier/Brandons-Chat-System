@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat System</title>
+    <link rel="stylesheet" href="Chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="logo">
+            <h1>Brandon's Chat</h1>
+        </div>
+        <div id="chatBox" class="chat-box">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+            <button onclick="triggerImageUpload()">Upload Image</button>
+            <input type="file" id="imageInput" accept="image/*" onchange="sendImage()">
+        </div>
+        <div class="user-settings">
+            <input type="text" id="usernameInput" placeholder="Enter username">
+            <button onclick="triggerProfilePicUpload()">Upload Profile Picture</button>
+            <input type="file" id="profilePicInput" accept="image/*" onchange="uploadProfilePicture()">
+            <select id="colorSelection" onchange="updateSelectedColor()">
+                <option value="white">White</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="purple">Purple</option>
+            </select>
+        </div>
+    </div>
+    <script src="Chat.js"></script>
+</body>
+</html>
